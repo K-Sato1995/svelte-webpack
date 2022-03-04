@@ -14,7 +14,7 @@ module.exports = {
 		alias: {
 			svelte: path.dirname(require.resolve('svelte/package.json'))
 		},
-		extensions: ['.mjs', '.js', '.ts', '.ts', '.svelte'],
+		extensions: ['.mjs', '.js', '.ts', '.svelte'],
 		mainFields: ['svelte', 'browser', 'module', 'main']
 	},
 	output: {
@@ -24,6 +24,10 @@ module.exports = {
 	},
 	module: {
 			rules: [
+				{
+					test: /\.html$/,
+					loader: 'html-loader',
+				},
 				{
 					test: /\.ts$/,
 					loader: 'ts-loader',
@@ -73,6 +77,9 @@ module.exports = {
 	],
 	devtool: prod ? false : 'inline-source-map',
 	devServer: {
-		hot: true
+		hot: true,
+		static: path.resolve(__dirname, 'public'),
+		compress: true,
+		port: 8080
 	}
 }
