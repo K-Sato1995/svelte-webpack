@@ -11,7 +11,7 @@
   <Router {url}>
     <nav>
       <Link to="/">Home</Link>
-      <Link to="about">Abouts</Link>
+      <Link to="about">About</Link>
       <Link to="/post/1">Post</Link>
     </nav>
     <div>

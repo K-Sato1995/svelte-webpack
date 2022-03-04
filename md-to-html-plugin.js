@@ -16,15 +16,16 @@ const markdownFilesData = fs.readdirSync(MARKDOWN_FILE_DIR)
     })
 	
 const makeHtmlConfig = ({ filename, markdown }) => {
+  const name = path.parse(filename).name
   return new HtmlWebpackPlugin({
     template: 'template/index.html',
     cache: true,
     chunks: ['main'],
     values: {
-      title: filename,
+      title: name,
       bodyContent: marked.parse(markdown),
     },    
-    filename: `pages/${filename}.html`,
+    filename: `pages/${name}.html`,
   })
 }
 
