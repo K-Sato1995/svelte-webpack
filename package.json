@@ -27,5 +27,8 @@
     "dev": "webpack serve --content-base public",
     "validate": "svelte-check",
     "lint": "npm run validate && eslint . --ext .ts"
+  },
+  "dependencies": {
+    "svelte-routing": "^1.6.0"
   }
 }
