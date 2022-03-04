@@ -8,7 +8,7 @@ const { markdownFilesData, makeHtmlConfig} = require('./md-to-html-plugin.js')
 
 module.exports = {
 	entry: {
-		'build/bundle': ['./src/main.ts']
+		'build/bundle': [path.resolve(__dirname, 'src/main.ts')]
 	},
 	resolve: {
 		alias: {

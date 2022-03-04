@@ -27,7 +27,7 @@
   },
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack",
-    "dev": "webpack serve public",
+    "dev": "webpack-dev-server",
     "validate": "svelte-check",
     "lint": "npm run validate && eslint . --ext .ts"
   },

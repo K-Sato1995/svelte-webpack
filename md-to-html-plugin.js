@@ -23,7 +23,7 @@ const makeHtmlConfig = ({ filename, markdown }) => {
     values: {
       title: filename,
       bodyContent: marked.parse(markdown),
-    },
+    },    
     filename: `pages/${filename}.html`,
   })
 }
